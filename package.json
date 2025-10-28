@@ -1,0 +1,26 @@
+{
+  "name": "@402street/sdk",
+  "version": "1.0.0",
+  "description": "JavaScript SDK for x402: request payments, verify transactions, and receive unlock events.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": ["x402", "402", "payments", "solana", "iot", "unlock"],
+  "author": "402Street",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
